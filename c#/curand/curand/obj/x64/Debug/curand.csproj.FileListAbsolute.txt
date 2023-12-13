@@ -1,7 +1,0 @@
-Z:\c#\curand\curand\bin\x64\Debug\curand.exe.config
-Z:\c#\curand\curand\bin\x64\Debug\curand.exe
-Z:\c#\curand\curand\bin\x64\Debug\curand.pdb
-Z:\c#\curand\curand\obj\x64\Debug\curand.csproj.AssemblyReference.cache
-Z:\c#\curand\curand\obj\x64\Debug\curand.csproj.CoreCompileInputs.cache
-Z:\c#\curand\curand\obj\x64\Debug\curand.exe
-Z:\c#\curand\curand\obj\x64\Debug\curand.pdb
