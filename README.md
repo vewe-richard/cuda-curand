@@ -1,5 +1,8 @@
 # using cuRand capabilities on C#
-## 1.create curand.dll
+## 1.Prepare Environment
+1.1 Make sure CUDA Toolkit is installed and CUDA environment variables are correctly set.</br>
+``·
+## 1.Create curand.dll
 1.1  Make sure CUDA Toolkit is installed and CUDA environment variables are correctly set.</br>
 1.2  Create curand.cu files</br>
 1.3 It uses __declspec(dllexport) to define an exported function called generate_random_numbers, and employs extern “C” to instruct the compiler to decorate the names in a manner consistent with C language conventions.<br/>
