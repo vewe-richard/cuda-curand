@@ -8,6 +8,6 @@
 1.4  Link the object files with other dependencies and generate the DLL file. During the linking process, you need to specify the appropriate options and libraries.</br>
 `   nvcc -shared -o curand.dll curand.obj -lcudart   `</br>
 ## 2.import curand.dll in C#
-2.1  Move the generated DLL to the ‘bin/debug’ directory of your C# project.
+2.1  Move the generated DLL to the ‘bin/debug’ directory of your C# project.</br>
 2.2  Use DllImport to import your CUDA DLL.</br>
 2.3  Finally, cuRand can be implemented in C#
