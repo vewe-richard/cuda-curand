@@ -1,24 +1,30 @@
-﻿using System;
+using System;
 using System.Runtime.InteropServices;
 
 class Program
 {
-    // Assume "cuda_dll.dll" is the name of your CUDA DLL and
-    // "generate_random_numbers" is exported from that DLL.
-    // Here we declare the external CUDA function.
-    [DllImport("curand.dll")]
-    private static extern unsafe void generate_random_numbers(float* hostData, int n);
+    [DllImport("curand.dll", EntryPoint = "generate_random_numbers")]
+    private static extern void GenerateRandomNumbers(IntPtr hostData, int n);
 
-    static unsafe void Main()
+    static void Main()
     {
-        int n = 10000;
-        float* hostData = (float*)Marshal.AllocHGlobal(n * sizeof(float)).ToPointer();
+        const int n = 100; 
+        float[] randomNumbers = new float[n];
+        GCHandle handle = GCHandle.Alloc(randomNumbers, GCHandleType.Pinned);
 
-        generate_random_numbers(hostData, n);
-
-        for (int i = 0; i < 10; i++)
+        try
         {
-            Console.WriteLine(hostData[i]);
+            GenerateRandomNumbers(handle.AddrOfPinnedObject(), n);
+
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine(randomNumbers[i]);
+            }
+        }
+        finally
+        {
+            if (handle.IsAllocated)
+                handle.Free();
         }
     }
 }
