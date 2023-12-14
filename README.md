@@ -3,8 +3,8 @@
 1.1 Make sure CUDA Toolkit is installed and CUDA environment variables are correctly set.</br>
 `   nvcc --version   `<br/>
 1.2 Enter PowerShell <br/>
-1.3 `   git clone https://github.com/vewe-richard/cuda-curand.git`<br/>
-    `   cd cuda-curand`
+1.3 `   git clone https://github.com/vewe-richard/cuda-curand.git   `<br/>
+1.4 `   cd cuda-curand   `
 ## 1.Create curand.dll
 2.1 `   cd curand   `<br/>
 2.2 `   nvcc -c -o curand.obj curand.cu   `</br>
