@@ -12,7 +12,7 @@
 2.4 Now a curand.dll has been successfully created<dr/>
 ## 2.Import curand.dll in C#
 3.1 Copy the generated DLL to the ‘bin/debug’ directory of your C# project.</br>
-3.2 Use DllImport to import your CUDA DLL.</br>
+3.2 Use DllImport to import your CUDA DLL, please refer to curand/Program.cs.</br>
 `   [DllImport("curand.dll", EntryPoint = "generate_random_numbers")]   `</br>
 `   private static extern void GenerateRandomNumbers(IntPtr hostData, int n);   `</br>
 3.3 Finally, cuRand can be implemented in C#
